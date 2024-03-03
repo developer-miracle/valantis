@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+}
+
+.item-container {
+    color: white;
+}
+
+.buttons {
+    
+}
+.button {
+width: 80px;
+height: 40px;
+}
