@@ -90,7 +90,11 @@ function displayPagination(idList) {
         elementPagination.appendChild(buttonPage)
     }
 }
-
+/**
+ * Метод отображает список товаров на странице
+ *
+ * @param {*} numberPage
+ */
 function displayPage(numberPage) {
     let elementItemList = document.getElementById('item-list')
     if (!elementItemList) return
@@ -99,6 +103,7 @@ function displayPage(numberPage) {
 
     let offset = (numberPage - 1) * ITEMS_PER_PAGE
     let ids = idList.slice(offset, offset + ITEMS_PER_PAGE)
+
 
     fetchItemsById(ids, data => {
         // Приводим к уникальному массиву
@@ -130,6 +135,4 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(idList)
         displayPage(1)
     })
-
-
 })
